@@ -1,0 +1,107 @@
+CRUD OPERATIONS IN MYSQL AND MONGODB
+
+View Databases
+MYSQL: show databases
+MONGODB: show dbs
+
+Create a database
+MYSQL:create database dbname;
+MONGODB: use DATABASE_NAME
+
+Select a database
+MYSQL: use dbname;
+MONGODB:use DATABASE_NAME
+// db to check what db you are using
+//To display database, you need to insert at least one document into it.
+
+View tables/collections
+MYSQL: show tables
+MONGODB: show collections
+
+Create a table/collection
+MYSQL:  create table tablename
+$sql = "create table users(username varchar(9),";
+MONGODB:db.createCollection("mycollection")
+
+Delete a table/collection 
+MYSQL: drop table tablename
+$sql = "drop table if exists patientrecords3
+MONGODB: db.COLLECTION_NAME.drop()
+
+See Description of TABLE/COLLECTION
+MYSQL: describe tablename
+MONGODB:
+
+Add parameters to table/collection
+MYSQL: insert into tablename(username, password) values(‘primetuber’, ’123456’, ’tcolas@gmail.com’);
+$sql = "insert into users values ('999999999',";
+$sql .="password varchar(25), email varchar(25));";
+MONGODB:db.COLLECTION_NAME.insert(document)
+
+Find/search for an entity
+MYSQL: select * from tablename
+$sql ="select * from patientrecords3 where lname = 'Pan';";
+MONGODB:
+
+UPDATE AN ENTITY
+MYSQL:
+//update a whole column
+UPDATE columnname
+SET key = newvalue
+// be more specific by using WHERE
+WHERE username=‘uhjkh’
+MONGODB:
+
+DELETE MULTIPLE IDENTITIES 
+MYSQL:
+
+Multirelations in databases
+MYSQL:// make a table using unique/objectids from other tables
+MONGODB:// just store your shit in the same object
+
+
+COMPLEX CREATE
+create table students2(zno2 int(11) unsigned primary key not null, name varchar(25) not null, major varchar(25), gpa int(3) unsigned, class varchar(25), email varchar(25), campusstd varchar(25) not null);
+
+
+DELETE A DATABASE IN MONGODB
+db.dropDatabase()
+
+MAKE MULTIPLE TABLES WITH SCRIPT
+You need to separate the create table scripts with / or end the command with ; like this
+
+CREATE TABLE ACCOUNT_DETAILS_TB ( CUSTOMER_ID VARCHAR2(20) NOT NULL , ACCOUNT_ID VARCHAR2(20) NOT NULL )
+/
+CREATE TABLE ADDRESS_DETAILS_TB ( ACCOUNT_ID VARCHAR2(20) NOT NULL , ADDRESS_ID VARCHAR2(20) NOT NULL )
+/
+
+CREATE TABLE test (CUSTOMER_ID VARCHAR2(20) NOT NULL , ACCOUNT_ID VARCHAR2(20) NOT NULL );
+
+CREATE TABLE ADDRESS_DETAILS_TB ( ACCOUNT_ID VARCHAR2(20) NOT NULL , ADDRESS_ID VARCHAR2(20) NOT NULL );
+
+
+CREATE TABLE tablename( columnname datatype(maxlength) //NOT NULL
+
+
+how to add new column to datatable in mysql
+
+The syntax to add a column in a table in MySQL (using the ALTER TABLE statement) is: ALTER TABLE table_name ADD new_column_name column_definition [ FIRST | AFTER column_name ]; table_name. The name of the table to modify.
+
+
+HOW TO ALTER COLUMN DESCRIPTION this is for sql server
+
+My SQL / Oracle (prior version 10G):
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype;
+
+
+MOVE DATA FROM ONE TABLE TO ANOTHER
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition; // optional
+
+MOVE SOME COLUMN OVER INTO ANOTHER TABLE’S COLUMNS
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
