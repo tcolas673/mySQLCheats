@@ -105,3 +105,28 @@ INSERT INTO table2 (column1, column2, column3, ...)
 SELECT column1, column2, column3, ...
 FROM table1
 WHERE condition;
+
+MYSQL
+WHERE YEAR(COLUMNNAME) = 2012;
+
+// ALMOST ALWAYS FOLLOWED BY A COUNT
+HAVING COUNT(Id) >= 9
+
+// UPDATE A TABLE
+UPDATE table_name
+SET column_name = values
+WHERE ...
+
+// ADD A COLUMN TO A TABLE
+ALTER table_name
+ADD column_name datatype(length) 
+
+DROP COLUMN column_name
+
+CHANGE A NAME 
+RENAME t1 to t2
+
+The difference between Union and Union all is that Union all will not 
+eliminate duplicate rows, instead it just pulls all the rows from all the tables 
+fitting your query specifics and combines them into a table. 
+A UNION statement effectively does a SELECT DISTINCT on the results set.

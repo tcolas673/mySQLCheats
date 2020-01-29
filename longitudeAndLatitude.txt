@@ -1,0 +1,4 @@
+CREATE TABLE `coords` (
+  `lat` DECIMAL( 10, 6 ) NOT NULL ,
+  `lng` DECIMAL( 10, 6 ) NOT NULL ,
+) ENGINE = MYISAM ;

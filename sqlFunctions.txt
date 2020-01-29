@@ -1,0 +1,30 @@
+// TEXT MANIPULATION FUNCTIONS
+LEFT()
+LENGTH()
+DATALENGTH()
+LEN()
+LOWER()
+LTRIM()
+RIGHT()
+RTRIM()
+SOUNDEX()
+UPPER()
+
+// GET YEAR
+YEAR()
+
+// NUMERIC MANIPULATION FUNCTIONS
+ABS()
+COS()
+EXP()
+PI()
+SIN()
+SQRT()
+TAN()
+https://www.w3schools.com/sql/sql_ref_mysql.asp
+// AGGREGATE FUNCTIONS
+AVG()
+COUNT()
+MAX()
+MIN()
+SUM()
