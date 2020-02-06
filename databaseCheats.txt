@@ -130,3 +130,35 @@ The difference between Union and Union all is that Union all will not
 eliminate duplicate rows, instead it just pulls all the rows from all the tables 
 fitting your query specifics and combines them into a table. 
 A UNION statement effectively does a SELECT DISTINCT on the results set.
+
+TYPES OF JOINS
+
+INNER JOIN
+
+SELECT * FROM Customer INNER JOIN City on Customer.cityId=City.cityId
+
+LEFT JOIN
+SELECT * FROM Customer LEFT JOIN City on Customer.cityId=City.cityId
+
+RIGHT JOIN
+SELECT * FROM Customer RIGHT JOIN City on Customer.cityId=City.cityId
+
+FULL JOIN
+SELECT * FROM Customer FULL JOIN City on Customer.cityId=City.cityId
+
+DIFF BWN PROCEDURES AND VIEWS
+
+Here is a good summary:
+A Stored Procedure:
+* Accepts parameters
+* Can NOT be used as building block in a larger query
+* Can contain several statements, loops, IF ELSE, etc.
+* Can perform modifications to one or several tables
+* Can NOT be used as the target of an INSERT, UPDATE or DELETE statement.
+
+A View:
+* Does NOT accept parameters
+* Can be used as building block in a larger query
+* Can contain only one single SELECT query
+* Can NOT perform modifications to any table
+* But can (sometimes) be used as the target of an INSERT, UPDATE or DELETE statement.
