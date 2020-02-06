@@ -162,3 +162,6 @@ A View:
 * Can contain only one single SELECT query
 * Can NOT perform modifications to any table
 * But can (sometimes) be used as the target of an INSERT, UPDATE or DELETE statement.
+
+
+EXECUTE StoredProcedureName
