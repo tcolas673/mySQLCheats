@@ -165,3 +165,29 @@ A View:
 
 
 EXECUTE StoredProcedureName
+
+TRANSACTION 
+A block of SQL statements
+
+ROLLBACK
+The process of undoing specified SQL statements
+
+COMMIT
+Writing unsaved SQL statements to the database tables
+
+SAVEPOINT
+A temporary placeholder in a transaction set to which you can issue a rollback
+
+TRANSACTION PROCESSING
+
+TRANSACTION 
+A block of SQL statements
+
+ROLLBACK
+The process of undoing specified SQL statements
+
+COMMIT
+Writing unsaved SQL statements to the database tables
+
+SAVEPOINT
+A temporary placeholder in a transaction set to which you can issue a rollback
